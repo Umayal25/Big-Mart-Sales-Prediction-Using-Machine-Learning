@@ -58,10 +58,10 @@ The project implements several machine learning algorithms, including:
 These algorithms are compared based on their performance, with the best model being used for the final predictions.
 
 ## Evaluation Metrics
-Mean Absolute Error (MAE): Measures the average magnitude of errors in a set of predictions, without considering their direction. Lower values indicate better accuracy.
-Mean Squared Error (MSE): Measures the average squared difference between the estimated values and the actual value. Lower values indicate better accuracy.
-Root Mean Squared Error (RMSE): The square root of the mean squared error. It provides an estimate of the standard deviation of the prediction errors. Lower values indicate better accuracy.
-R-squared (R2): Indicates the proportion of the variance in the dependent variable that is predictable from the independent variables. Values closer to 1 indicate a better fit.
+1. Mean Absolute Error (MAE): Measures the average magnitude of errors in a set of predictions, without considering their direction. Lower values indicate better accuracy.
+2. Mean Squared Error (MSE): Measures the average squared difference between the estimated values and the actual value. Lower values indicate better accuracy.
+3. Root Mean Squared Error (RMSE): The square root of the mean squared error. It provides an estimate of the standard deviation of the prediction errors. Lower values indicate better accuracy.
+4. R-squared (R2): Indicates the proportion of the variance in the dependent variable that is predictable from the independent variables. Values closer to 1 indicate a better fit.
 
 ## How to Run the Project
 
