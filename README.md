@@ -14,7 +14,7 @@ Welcome to the BigMart Sales Prediction project! This project leverages machine 
 5. [Machine Learning Algorithms](#machine-learning-algorithms)
 6. [How to Run the Project](#how-to-run-the-project)
 7. [Contributing](#contributing)
-8. [Screen shots](#screen shots)
+8. [Screenshots](#screenshots)
 
 ## Introduction
 
