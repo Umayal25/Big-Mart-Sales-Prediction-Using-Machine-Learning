@@ -14,7 +14,7 @@ Welcome to the BigMart Sales Prediction project! This project leverages machine 
 5. [Machine Learning Algorithms](#machine-learning-algorithms)
 6. [How to Run the Project](#how-to-run-the-project)
 7. [Contributing](#contributing)
-8. [License](#license)
+8. [Screen shots](#screen shots)
 
 ## Introduction
 
@@ -100,10 +100,6 @@ These algorithms are compared based on their performance, with the best model be
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute, please fork the repository and create a pull request. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## Screen Shots
 ![image](https://github.com/Umayal25/Big-Mart-Sales-Prediction-Using-Machine-Learning/assets/92157178/822d2b61-2353-44d7-adde-e365567dc1db)
