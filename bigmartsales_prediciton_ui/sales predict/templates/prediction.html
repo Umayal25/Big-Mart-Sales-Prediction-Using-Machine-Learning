@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Sales Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: rgb(34, 193, 195);
+            background: radial-gradient(circle at -0.2% 48.9%, rgb(32, 233, 104) 0%, rgb(13, 167, 236) 99.8%);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 500px; /* Increased form width */
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5%;
+            background: rgb(238,174,202);
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        label {
+            width: 200px;
+            white-space: nowrap;
+            text-align: left; /* Left justify labels */
+            margin-right: 20px; /* Adjusted margin for equal spacing */
+			font-weight: bold;
+        }
+        input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            flex: 1;
+        }
+        button {
+            padding: 5px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+		.back-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 15px 30px;
+            background-color:#430f58;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="back-button">Back to Home</a>
+    <form id="predict-form">
+        <center><h2>Bigmart Sales Predection</h2></center>
+        <div class="form-group">
+            <label for="Item_Identifier">Enter Item Identifier:</label>
+            <input type="text" id="Item_Identifier" name="Item_Identifier" placeholder="Item Identifier">
+        </div>
+
+        <div class="form-group">
+            <label for="Item_Weight">Enter Item Weight:</label>
+            <input type="text" id="Item_Weight" name="Item_Weight" placeholder="Item Weight">
+        </div>
+
+        <div class="form-group">
+            <label for="Item_Fat_Content">Enter Item Fat Content:</label>
+            <input type="text" id="Item_Fat_Content" name="Item_Fat_Content" placeholder="Item Fat Content">
+        </div>
+
+        <div class="form-group">
+            <label for="Item_Visibility">Enter Item Visibility:</label>
+            <input type="text" id="Item_Visibility" name="Item_Visibility" placeholder="Item Visibility">
+        </div>
+
+        <div class="form-group">
+            <label for="Item_Type">Enter Item Type:</label>
+            <input type="text" id="Item_Type" name="Item_Type" placeholder="Item Type">
+        </div>
+
+        <div class="form-group">
+            <label for="Item_MRP">Enter Item MRP:</label>
+            <input type="text" id="Item_MRP" name="Item_MRP" placeholder="Item MRP">
+        </div>
+
+        <div class="form-group">
+            <label for="Outlet_Identifier">Enter Outlet Identifier:</label>
+            <input type="text" id="Outlet_Identifier" name="Outlet_Identifier" placeholder="Outlet Identifier">
+        </div>
+
+        <div class="form-group">
+            <label for="Outlet_Establishment_Year">Enter Outlet<br>Establishment Year:</label>
+            <input type="text" id="Outlet_Establishment_Year" name="Outlet_Establishment_Year" placeholder="Outlet Establishment Year">
+        </div>
+
+        <div class="form-group">
+            <label for="Outlet_Size">Enter Outlet Size:</label>
+            <input type="text" id="Outlet_Size" name="Outlet_Size" placeholder="Outlet Size">
+        </div>
+
+        <div class="form-group">
+            <label for="Outlet_Location_Type">Enter Outlet Location Type:</label>
+            <input type="text" id="Outlet_Location_Type" name="Outlet_Location_Type" placeholder="Outlet Location Type">
+        </div>
+
+        <div class="form-group">
+            <label for="Outlet_Type">Enter Outlet Type:</label>
+            <input type="text" id="Outlet_Type" name="Outlet_Type" placeholder="Outlet Type">
+        </div>
+<br>
+        <button type="submit">Predict</button>
+        <div id="result"></div>
+    </form>
+
+
+    <script>
+    document.getElementById('predict-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
+            const response = await fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+    
+            const result = await response.json();
+            document.getElementById('result').textContent = 'Predicted sales: ' + result.result;
+        });
+
+
+    </script>
+</body>
+</html>

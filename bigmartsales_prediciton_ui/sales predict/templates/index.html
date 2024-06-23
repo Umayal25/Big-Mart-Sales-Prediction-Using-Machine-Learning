@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bigmart Sales Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: rgb(34, 193, 195);
+            background: radial-gradient(circle at -0.2% 48.9%, rgb(32, 233, 104) 0%, rgb(13, 167, 236) 99.8%);
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        .container {
+            padding: 20px;
+            position: relative;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            border-top: 1px solid white;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid white;
+            border-right: 1px solid white; /* Added column border */
+            text-align: center; /* Justify content correctly */
+        }
+        th:first-child, td:first-child {
+            border-left: 1px solid white; 
+        }
+        th:last-child, td:last-child {
+            border-right: 1px solid white; 
+        }
+        button {
+            padding: 15px 30px;
+            background-color: #430f58;
+            font-size: 20px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            animation: blink-animation 1s infinite;
+        }
+        .full-width-img {
+            width: 80%;
+            height: 100%;
+            margin-bottom: 20px;
+        }
+		h1{
+		color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 255, 0.4);
+		}
+        p {
+    
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 255, 0.4);
+    font-family: 'Roboto', sans-serif; /* Applying Roboto font to paragraphs */
+    font-size: 20px; /* Adjust the font size as needed */
+    line-height: 1.8; /* Adjust the line height for better readability */
+}
+        @keyframes blink-animation {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Bigmart Sales Prediction</h1>
+        <img src="static/bigmart.png"alt="Bigmart Image" class="full-width-img">
+        <p>
+            The Bigmart Sales Prediction project helps store owners predict their sales based on various parameters. By analyzing historical data, owners can make informed decisions to optimize inventory, pricing, and promotions, leading to increased sales and profitability.
+        </p>
+        <p>
+            Owners can input specific details such as item weight, visibility, type, maximum retail price, outlet size, location type, and more to generate accurate sales predictions. This web application simplifies the prediction process and empowers store owners to make data-driven decisions.
+        </p>
+        <p>
+            Explore the predictive power of our tool by clicking on the  predict your sales button!
+        </p>
+        <p>
+            These are the parameters for which you need to feed your values,and the description of it is given below for your reference!
+        </p>
+        <table>
+            <tr>
+                <th>Attributes</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Item_Identifier</td>
+                <td>Unique product ID</td>
+            </tr>
+            <tr>
+                <td>Item_Weight</td>
+                <td>Weight of product</td>
+            </tr>
+            <tr>
+                <td>Item_Fat_Content</td>
+                <td>Whether the product is low fat or not</td>
+            </tr>
+            <tr>
+                <td>Item_Visibility</td>
+                <td>The % of total display area of all products in a store allocated to the particular product</td>
+            </tr>
+            <tr>
+                <td>Item_Type</td>
+                <td>The category to which the product belongs</td>
+            </tr>
+            <tr>
+                <td>Item_MRP</td>
+                <td>Maximum Retail Price (list price) of the product</td>
+            </tr>
+            <tr>
+                <td>Outlet_Identifier</td>
+                <td>Unique store ID</td>
+            </tr>
+            <tr>
+                <td>Outlet_Establishment_Year</td>
+                <td>The year in which store was established</td>
+            </tr>
+            <tr>
+                <td>Outlet_Size</td>
+                <td>The size of the store in terms of ground area covered</td>
+            </tr>
+            <tr>
+                <td>Outlet_Location_Type</td>
+                <td>The type of city in which the store is located</td>
+            </tr>
+            <tr>
+                <td>Outlet_Type</td>
+                <td>Whether the outlet is just a grocery store or some sort of supermarket</td>
+            </tr>
+        </table>
+        <button onclick="window.location.href='/prediction'">Predict Your Sales</button>
+    </div>
+</body>
+</html>
+
+
