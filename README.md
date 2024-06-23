@@ -12,9 +12,10 @@ Welcome to the BigMart Sales Prediction project! This project leverages machine 
 3. [Benefits](#benefits)
 4. [Use Cases](#use-cases)
 5. [Machine Learning Algorithms](#machine-learning-algorithms)
-6. [How to Run the Project](#how-to-run-the-project)
-7. [Contributing](#contributing)
-8. [Screenshots](#screenshots)
+6. [Evaluation Metrics](#evaluation-metrics)
+7. [How to Run the Project](#how-to-run-the-project)
+8. [Contributing](#contributing)
+9. [Screenshots](#screenshots)
 
 ## Introduction
 
@@ -55,6 +56,12 @@ The project implements several machine learning algorithms, including:
 6. **Random Forest Regressor**
 
 These algorithms are compared based on their performance, with the best model being used for the final predictions.
+
+## Evaluation Metrics
+Mean Absolute Error (MAE): Measures the average magnitude of errors in a set of predictions, without considering their direction. Lower values indicate better accuracy.
+Mean Squared Error (MSE): Measures the average squared difference between the estimated values and the actual value. Lower values indicate better accuracy.
+Root Mean Squared Error (RMSE): The square root of the mean squared error. It provides an estimate of the standard deviation of the prediction errors. Lower values indicate better accuracy.
+R-squared (R2): Indicates the proportion of the variance in the dependent variable that is predictable from the independent variables. Values closer to 1 indicate a better fit.
 
 ## How to Run the Project
 
