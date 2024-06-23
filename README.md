@@ -104,3 +104,8 @@ Contributions are welcome! If you'd like to contribute, please fork the reposito
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Screen Shots
+![image](https://github.com/Umayal25/Big-Mart-Sales-Prediction-Using-Machine-Learning/assets/92157178/822d2b61-2353-44d7-adde-e365567dc1db)
+
+![image](https://github.com/Umayal25/Big-Mart-Sales-Prediction-Using-Machine-Learning/assets/92157178/68a63c39-742f-4df0-8f46-ba51ff644dd3)
